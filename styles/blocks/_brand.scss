@@ -1,9 +1,9 @@
 @use '../helpers' as *;
 
 .brand {
-
    padding-top: clamp(1.875rem, -0.884rem + 13.79vw, 9.375rem);
    padding-bottom: clamp(1.875rem, -0.125rem + 10vw, 7.313rem);
+   background-color: var(--color-white);
    &__inner {
       position: relative;
       display: -webkit-box;

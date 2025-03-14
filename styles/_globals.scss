@@ -35,7 +35,7 @@ body {
 .h4,
 .h5,
 .h6 {
-   color: #252525;
+   color: var(--color-darker);
    letter-spacing: 0.06em;
 }
 
@@ -49,7 +49,18 @@ body {
 .h2 {
    font-size: clamp(1.75rem, 1.29rem + 2.5vw, 3rem);
    font-weight: 700;
-
+   position: relative;
+   
+   &:after {
+      content: "";
+      position: absolute;
+      display: block;
+      left: 0;
+      width: 45px;
+      height: 2px;
+      background: var(--color-darker);
+      bottom: 0;
+   }
 }
 
 .h3 {
@@ -76,7 +87,7 @@ body {
 
 .h4 {
    font-size: clamp(1.125rem, 0.987rem + 0.69vw, 1.5rem);
-   font-weight: 400;
+   font-weight: 300;
    letter-spacing: 0.11em;
    color: #373737;
 }
@@ -125,10 +136,6 @@ button {
    
 }
 
-section {
-   scroll-margin-top: 100px;
-}
-
 img,
  video {
    display: block;
@@ -143,4 +150,8 @@ img,
 
 ul {
    list-style-type: none;
+}
+
+figure {
+   margin: 0;
 }

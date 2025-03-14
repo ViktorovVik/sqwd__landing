@@ -3,14 +3,18 @@
 .slide {
    height: 904px;
    overflow: hidden;
-   
+   cursor: grab;
+
+   &:active {
+      cursor: grabbing;
+   }
 
    display: flex;
    flex-direction: column;
    justify-content: center;
    align-items: center;
 
-   background-image: url('../images/hero/image.webp');
+   background-image: url('../assets/images/hero/image.webp');
    background-size: cover;
    background-position: center;
 
@@ -20,12 +24,12 @@
 
 
    &--2 {
-      background-image: url('../images/hero/image2.webp');
+      background-image: url('../assets/images/hero/image2.webp');
    }
 
 
    &--3 {
-      background-image: url('../images/hero/image3.webp');
+      background-image: url('../assets/images/hero/image3.webp');
    }
 
    &__content {

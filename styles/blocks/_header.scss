@@ -4,6 +4,8 @@
    position: absolute;
    width: 100%;
    z-index: 10;
+   
+   
    &__inner {
       padding-block: clamp(1.875rem, 0.749rem + 5.63vw, 4.938rem);
    }
@@ -29,15 +31,10 @@
 
          &.is-active {
             transform: translate(0%, 0%);
+            
          }
          
       }
-
-      @include mobile-s {
-         
-         
-      }
-      
    }
 
    &__nav-list {
@@ -52,10 +49,11 @@
       }
    }
 
+
    &__nav-link {
       letter-spacing: 0.14em;
       position: relative;
-      color: var(--color-white);
+      color: var(--color-white);      
       
       &::after {
             content: "";
@@ -67,16 +65,22 @@
             background-color: var(--color-accent);
             -webkit-transition: width .5s ease-in-out;
              transition: width .5s ease-in-out;
+
+             @include mobile {
+               width: 100%;
+             }
       }
 
       @media (any-hover: hover) {
          &:hover {
-            color: var(--color-accent)
+            color: var(--color-accent);
+            
          }
 
          &:hover:after {
             width: 100%;
             color: var(--color-accent); 
+            
          }
       }
    }

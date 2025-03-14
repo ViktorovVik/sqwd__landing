@@ -15,7 +15,7 @@ const swiper = new Swiper('.swiper', {
    },
 });
 
-function mobileNav() {
+
    const menu = document.querySelector('[data-js-header-menu]');
    const navBtn = document.querySelector('[data-js-header-burger-button]');
    const paginationButtons = document.querySelector('[data-header-pagination]');
@@ -27,8 +27,8 @@ function mobileNav() {
          navBtn.classList.toggle('is-active');
          paginationButtons.classList.toggle('none')
       })
-   }
 }
 
-mobileNav()
+
+
 

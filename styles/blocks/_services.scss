@@ -1,0 +1,54 @@
+@use '../helpers' as *;
+
+.services {
+   scroll-margin-top: 60px;
+   padding-bottom: clamp(1.875rem, -0.562rem + 12.18vw, 8.5rem);
+   &__title {
+      margin-bottom: clamp(1.25rem, -0.244rem + 7.47vw, 5.313rem);
+   }
+
+   &__list {
+      display: grid;
+      grid-template-columns: repeat(12, 1fr);
+      gap: 28px;
+   }
+
+   &__item {
+      max-width: 373px;
+      width: 100%;
+      position: relative;
+      grid-column: 4 span;
+
+      @include lg {
+         grid-column: 6 span;
+         justify-self: center;
+         align-items: center;
+      }
+
+      @include mobile {
+         grid-column: 12 span;
+         
+      }
+
+
+   &:after {
+      position: absolute;
+      left: 0;
+      bottom: 0;
+      display: inline-block;
+      content: "";
+      width: 100%;
+      height: 3px;
+      background: var(--color-accent);
+      transform: scaleX(0);
+      transform-origin: left;
+      transition: transform .5s ease-in-out;
+   }
+
+
+   &:hover:after {
+      transform: scaleX(1);
+   }
+   }
+}
+

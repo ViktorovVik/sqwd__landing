@@ -1,0 +1,119 @@
+@use '../helpers' as *;
+
+.card {
+   padding: 40px 20px;
+   display: flex;
+   flex-direction: column;
+   background-color: var(--color-white);
+
+
+  
+   
+
+   &__top {
+      display: flex;
+      justify-content: space-between;
+      margin-bottom: 20px;
+   }
+
+   &__title {
+      text-transform: uppercase;
+      position: relative;
+      padding-bottom: 5px;
+
+      &::before {
+         content: "";
+         position: absolute;
+         display: block;
+         left: 0;
+         width: 35px;
+         height: 2px;
+         background: var(--color-darker);
+         bottom: 0;
+         
+      }
+   }
+
+   &__icon {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+      width: 50px;
+      height: 50px;
+      border-radius: 100%;
+      background-color: #fff;
+      -webkit-filter: drop-shadow(0 0 20px #dbdbdb);
+      filter: drop-shadow(0 0 20px #dbdbdb);
+
+      &:before {
+         content: "";
+         width: 25px;
+         height: 25px;
+         display: block;
+         background-repeat: no-repeat;
+         background-position: center;
+         opacity: .4;
+         transition: opacity .5s ease-in-out;
+
+        
+      }
+
+      &--1 {
+         &:before {
+            content: '';
+            background-image: url('../assets/icons/icon-branding.svg'); 
+         } 
+      } 
+
+      &--2 {
+         &:before {
+            content: '';
+            background-image: url('../assets/icons/pencil-case.svg'); 
+         } 
+      }
+
+      &--3 {
+         &:before {
+            content: '';
+            background-image: url('../assets/icons/icon-develop.svg'); 
+         } 
+      }
+
+      &--1,
+      &--2,
+      &--3 {
+         &:hover:before {
+            opacity: 1;
+         }
+      }
+
+   }
+
+   &__desc {
+      margin-bottom: 20px;
+      p {
+         font-family: var(--second-family);
+         font-weight: 400;
+         font-size: 16px;
+ 
+         line-height: 2.08333;
+         letter-spacing: 0.08em;
+         color: var(--color-gray-alt);
+      }
+   }
+
+   &__link {
+      text-transform: uppercase;
+      font-weight: 300;
+      font-size: 14px;
+      letter-spacing: 0.06em;
+      color: var( --color-darker);
+
+      opacity: 0.5;
+   }
+
+
+}
+
+
