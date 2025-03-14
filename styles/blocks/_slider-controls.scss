@@ -1,0 +1,57 @@
+@use '../helpers' as *;
+
+.slider-controls {
+   position: absolute;
+   bottom: 10px;
+   left: 0;
+   right: 0;
+   width: 100%;
+   z-index: 30;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   column-gap: 10px;    
+}
+
+.swiper-pagination-bullet {
+   transition-duration: var(--transition-duration);
+   
+   
+   &:before {
+      margin: 10px;
+      cursor: pointer;
+      display: inline-block;
+      counter-increment: pag;
+      content: "0" counter(pag);
+      color: #fff;
+      font-size: 18px;
+      font-weight: 700;
+      letter-spacing: 1.152px;
+      -webkit-transition: opacity .5s ease-in-out, -webkit-transform .5s ease-in-out;
+      transition: transform .5s ease-in-out, opacity .5s ease-in-out, -webkit-transform .5s ease-in-out;
+      opacity: 0.6;
+   }  
+
+   &-active::before {
+   
+      -webkit-transform: scale(2);
+      -ms-transform: scale(2);
+      transform: scale(2);
+      -webkit-text-decoration-line: line-through;
+      text-decoration-line: line-through;
+      -webkit-text-decoration-color: #4caf50;
+      text-decoration-color: #4caf50;
+      text-decoration-thickness: 2px;
+      opacity: 1;
+   }
+
+} 
+
+
+
+
+
+
+
+
+

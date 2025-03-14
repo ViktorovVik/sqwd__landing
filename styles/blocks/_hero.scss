@@ -1,0 +1,10 @@
+@use '../helpers' as *;
+
+.hero {
+   position: relative; 
+   
+   &__controls {
+      counter-reset: pag;
+      margin-bottom: 25px;
+   }   
+}

@@ -1,0 +1,86 @@
+@use '../helpers' as *;
+
+.header {
+   position: absolute;
+   width: 100%;
+   z-index: 10;
+   &__inner {
+      padding-block: clamp(1.875rem, 0.749rem + 5.63vw, 4.938rem);
+   }
+
+   &__nav {
+      transition: .3s ease-in;
+      @include mobile {
+         position: fixed;
+         top: 0;
+         right: 0;
+         z-index: 100;
+         display: inline-flex;
+         flex-direction: column;
+         justify-content: center;
+         align-items: center;
+         transform: translate(100%, 0%);
+         width: 100%;
+         height: 100vh;
+         padding: 80px 60px 40px;
+         background-color: var(--color-darker);
+         
+
+
+         &.is-active {
+            transform: translate(0%, 0%);
+         }
+         
+      }
+
+      @include mobile-s {
+         
+         
+      }
+      
+   }
+
+   &__nav-list {
+      display: flex;
+      justify-content: end;
+      column-gap: clamp(1.25rem, 0.353rem + 4.48vw, 3.688rem);
+
+      @include mobile {
+         display: inline-flex;
+         flex-direction: column;
+         row-gap: 30px;
+      }
+   }
+
+   &__nav-link {
+      letter-spacing: 0.14em;
+      position: relative;
+      color: var(--color-white);
+      
+      &::after {
+            content: "";
+            position: absolute;
+            bottom: -2px;
+            right: 0;
+            width: 10px;
+            height: 2px;
+            background-color: var(--color-accent);
+            -webkit-transition: width .5s ease-in-out;
+             transition: width .5s ease-in-out;
+      }
+
+      @media (any-hover: hover) {
+         &:hover {
+            color: var(--color-accent)
+         }
+
+         &:hover:after {
+            width: 100%;
+            color: var(--color-accent); 
+         }
+      }
+   }
+}
+
+
+

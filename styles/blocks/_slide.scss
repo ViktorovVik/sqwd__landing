@@ -1,0 +1,53 @@
+@use '../helpers' as *;
+
+.slide {
+   height: 904px;
+   overflow: hidden;
+   
+
+   display: flex;
+   flex-direction: column;
+   justify-content: center;
+   align-items: center;
+
+   background-image: url('../images/hero/image.webp');
+   background-size: cover;
+   background-position: center;
+
+   @include mobile {
+      height: 704px;
+   }
+
+
+   &--2 {
+      background-image: url('../images/hero/image2.webp');
+   }
+
+
+   &--3 {
+      background-image: url('../images/hero/image3.webp');
+   }
+
+   &__content {
+      padding-inline: var(--container-padding-x);
+   }
+
+   &__title {
+      margin-bottom: 25px;
+      text-align: center;
+      @include tablet {
+         max-width: 900px;
+      }
+   }
+   
+   &__desc {
+      text-align: center;
+
+      p {
+         font-size: 20px;
+         letter-spacing: 0.06em;
+         color: var(--color-white);
+         opacity: 0.8;
+      }
+   }
+}

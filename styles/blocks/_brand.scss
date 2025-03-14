@@ -1,0 +1,165 @@
+@use '../helpers' as *;
+
+.brand {
+
+   padding-top: clamp(1.875rem, -0.884rem + 13.79vw, 9.375rem);
+   padding-bottom: clamp(1.875rem, -0.125rem + 10vw, 7.313rem);
+   &__inner {
+      position: relative;
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-pack: center;
+      -ms-flex-pack: center;
+
+      @include lg {
+         display: flex;
+         flex-direction: column;
+         justify-content: center;
+         align-items: center;
+      }
+   }
+
+   &__about {
+      @include lg {
+         margin-bottom: 20px;
+      }
+
+      
+   }
+   
+   &__title {
+      max-width: 280px;
+      margin-bottom: 26px;
+      left: -10px;
+      position: relative;
+      z-index: 10;
+
+      &-span {
+      font-weight: 300;
+      font-size: clamp(1.563rem, 1.172rem + 1.95vw, 2.625rem);
+      color: var(--color-gray);
+      }
+
+      @include mobile-s {
+         padding-left: 25px;
+      }
+   }
+   
+   &__text {
+      position: relative;
+      width: 310px;
+      z-index: 10;
+      left: 10px;
+
+      p {
+         color: var(--color-gray-alt);
+         font-family: var(--second-family);
+         font-size: 15px;
+         font-weight: 300;
+         line-height: 25px;
+         letter-spacing: 1.26px;
+      }
+      
+      &--left {
+         padding-left: 33px
+      }
+
+      &--right {
+         position: absolute;
+         bottom: 80px;
+         left: 78%;
+         z-index: 10;
+         padding-left: 33px;
+
+         @include laptop {
+            left: 70%;
+         }
+
+         @include tablet {
+            left: 67%;
+         }
+
+        @include lg {
+         display: none;
+        }
+      }
+         
+      &:before {
+         position: absolute;
+         top: 15px;
+         left: 0;
+         content: "";
+         width: 20px;
+         height: 2px;
+         background: #353535;
+         opacity: .5;
+      }
+   }
+
+   &__images { 
+      position: relative;
+      width: 100%;
+      max-width: 775px; 
+
+      @include mobile {
+         display: flex;
+         flex-direction: column;
+         justify-content: center;
+         align-items: center;
+      }
+    }
+
+    &__img {
+
+      &--1 {
+         position: relative;
+         margin-bottom: 167px;
+         right: 0;
+         z-index: 2;
+
+         @include mobile {
+            position: static;
+            margin-bottom: 20px;
+         }
+      }
+   
+      &--2 {
+         position: absolute;
+         top: 50%;
+         left: 39%;
+         -webkit-transform: translate(-50%, -50%);
+         -ms-transform: translate(-50%, -50%);
+         transform: translate(-50%, -50%);
+         display: inline-block;
+         width: 340px;
+         height: 400px;
+         background: var(--color-accent);
+         opacity: .8;
+         z-index: 1;
+
+
+         @include tablet {
+            display: none;
+         }
+      }
+   
+      &--3 {
+         position: absolute;
+         right: 93px;
+         bottom: 0;
+         opacity: .8;
+
+         @include lg {
+            right: 0;
+         }
+
+         @include mobile {
+            position: static;
+         }
+      }
+   }  
+}
+
+
+
