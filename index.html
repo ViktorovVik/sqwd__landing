@@ -21,10 +21,10 @@
                   <a href="" class="header__nav-link">WORKS</a>
                </li>
                <li class="header__nav-item">
-                  <a href="" class="header__nav-link">ABOUT</a>
+                  <a href="#brand" class="header__nav-link">ABOUT</a>
                </li>
                <li class="header__nav-item">
-                  <a href="" class="header__nav-link">SERVICES</a>
+                  <a href="#services" class="header__nav-link">SERVICES</a>
                </li>
                <li class="header__nav-item">
                   <a href="" class="header__nav-link">BLOG</a>
@@ -33,8 +33,7 @@
                   <a href="" class="header__nav-link">CONTACT</a>
                </li>
             </ul>
-         </nav>
-         
+         </nav>     
          <button class="burger__menu" data-js-header-burger-button>
             <span></span>
             <span></span>
@@ -48,7 +47,7 @@
                   <div class="swiper-wrapper">
                     <div class="swiper-slide">               
                      <div class="hero__slide">
-                      <div class="slide">
+                      <div class="slide" data-js-slide>
                         <div class="slide__content">
                            <div class="slide__title" data-swiper-parallax="-100%">
                               <h1 class="h1">WHERE GREAT IDEAS COME TO LIFE</h1>
@@ -97,7 +96,7 @@
                   </div>                           
             </div>
       </section>
-      <section class="brand" aria-label="brand section">
+      <section class="brand" id="brand" aria-label="brand section">
          <div class="brand__inner container">
             <div class="brand__about">
                <div class="brand__title">
@@ -113,21 +112,66 @@
             <div class="brand__images">
                <img 
                class="brand__img brand__img--1" 
-               src="./images/brand/image1.webp" 
-               alt=""
+               src="./assets/images/brand/image1.webp" 
+               alt="Photo"
                width="309" height="391"
                loading="lazy">
                <span class="brand__img brand__img--2"></span>
                <img 
                class="brand__img brand__img--3" 
-               src="./images/brand/image2.webp" 
-               alt=""
+               src="./assets/images/brand/image2.webp" 
+               alt="Photo"
                width="309" height="391"
                loading="lazy">
             </div>
                <div class="brand__text brand__text--right">
                   <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt.</p>
                </div>
+         </div>
+      </section>
+      <section class="services" id="services" aria-label="services seection">
+         <div class="services__inner container">
+            <div class="services__title">
+               <h2 class="h2">Our Services</h2>
+            </div>
+            <ul class="services__list">
+               <li class="services__item">
+                  <figure class="card">
+                     <div class="card__top">
+                        <h4 class="card__title h4">Branding</h4>
+                        <span class="card__icon card__icon--1"></span>
+                     </div>
+                     <div class="card__desc">
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt.</p>
+                     </div>
+                     <a href="#!" class="card__link">read more</a>
+                  </figure>
+               </li>
+               <li class="services__item">
+                  <figure class="card">
+                     <div class="card__top">
+                        <h4 class="card__title h4">Design</h4>
+                        <span class="card__icon card__icon--2"></span>
+                     </div>
+                     <div class="card__desc">
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt.</p>
+                     </div>
+                     <a href="#!" class="card__link">read more</a>
+                  </figure>
+               </li>
+               <li class="services__item">
+                  <figure class="card">
+                     <div class="card__top">
+                        <h4 class="card__title h4">Development</h4>
+                        <span class="card__icon card__icon--3"></span>
+                     </div>
+                     <div class="card__desc">
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt.</p>
+                     </div>
+                     <a href="#!" class="card__link">read more</a>
+                  </figure>
+               </li>
+            </ul>
          </div>
       </section>
    </main>
