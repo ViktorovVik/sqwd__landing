@@ -6,8 +6,6 @@
    flex-direction: column;
    background-color: var(--color-white);
 
-
-  
    
 
    &__top {
@@ -92,6 +90,9 @@
 
    &__desc {
       margin-bottom: 20px;
+
+      
+      
       p {
          font-family: var(--second-family);
          font-weight: 400;
@@ -100,6 +101,8 @@
          line-height: 2.08333;
          letter-spacing: 0.08em;
          color: var(--color-gray-alt);
+
+         
       }
    }
 

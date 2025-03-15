@@ -1,0 +1,66 @@
+@use '../helpers' as *;
+
+.work {
+   padding-bottom: clamp(1.875rem, -1.114rem + 14.94vw, 10rem);
+   background-color: var(--color-white);
+
+   &__inner {
+      display: flex;
+      justify-content: space-between;
+      column-gap: 10px;
+
+
+      @include lg {
+         flex-direction: column;
+         align-items: center;
+         row-gap: 30px;
+      }
+   }
+   
+   &__title {
+      margin-bottom: 50px;
+   }
+
+   &__col-left {
+
+   }
+
+   &__categories {
+      margin-bottom: clamp(2.5rem, -0.029rem + 12.64vw, 11.375rem);
+   }
+   
+   &__list {
+      display: flex;
+      flex-direction: column;
+      row-gap: 130px;
+
+      @include lg {
+         row-gap: 30px;
+      }
+   }
+
+   &__item {
+      display: grid;
+      grid-template-columns: repeat(12, 1fr);
+      gap: 20px;
+
+      @include mobile {
+         display: flex;
+         width: 100%;
+      }
+   }
+
+   &__article {
+      grid-column: 11 span
+   }
+
+   &__link {
+   font-size: 14px;
+   letter-spacing: 0.15em;
+   text-align: right;
+   color: var(--color-darker);
+   justify-content: end;
+   margin-top: auto;
+   }
+}
+
