@@ -1,0 +1,28 @@
+@use '../helpers' as *;
+
+
+.categories {
+   display: flex;
+   column-gap: clamp(1.25rem, 0.79rem + 2.3vw, 2.5rem);
+   row-gap: 20px;
+   flex-wrap: wrap;
+
+   &__button {
+      font-family: var(--second-family);
+      font-weight: 400;
+      font-size: 13px;
+      letter-spacing: 0.06em;
+      color: #252525;
+      opacity: 0.3;
+
+      &.active {
+         opacity: 1;
+      }
+
+      @media (any-hover: hover) {
+         &:hover {
+            opacity: 1;
+         }
+      }
+   }
+}

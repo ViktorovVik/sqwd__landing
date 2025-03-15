@@ -1,0 +1,117 @@
+@use '../helpers' as *;
+
+.work-card {
+   display: inline-flex;
+   flex-direction: column;
+   row-gap: 23px;
+   
+
+   
+
+   &__top {
+      position: relative;
+   }
+
+   &__img {
+      opacity: 0.3;
+      transition: .5s ease-in-out;
+
+     
+   }
+
+   &__title {
+      position: absolute;
+      right: -90px;
+      top: 59%;
+      transition: .5s  ease-in;
+      text-decoration-line: line-through;
+      text-decoration-color: transparent;
+      text-decoration-thickness: 2px;
+
+      
+      @include tablet {
+         right: 0;
+      }
+
+      @include mobile-s {
+         left: 10%;
+      }
+
+      &--right {
+         left: -114px;
+         right: 0;
+
+         @include tablet {
+            left: -80px;
+         }
+
+         @include mobile-s {
+            left: 10%;
+         }
+      }
+
+     
+   }
+   
+   &__text {
+      display: flex;
+      flex-direction: column;
+      row-gap: 20px;
+      max-width: 470px;
+
+      &--left {
+         padding-left: 40%;
+
+         @include mobile {
+            width: 100%;
+            padding-left: 0;
+         }
+      }
+
+      &--right {
+         padding-right: 40%;
+         text-align: right;
+
+         @include mobile {
+            width: 100%;
+            padding-right: 0;
+         }
+      }
+   }
+   
+   
+   &__desc {
+
+         font-family: var(--second-family);
+         font-weight: 300;
+         font-size: 14px; 
+         line-height: 1.76923;
+         letter-spacing: 0.06em;
+         opacity: .4;
+   }
+
+   &__link {
+
+      &--right {
+         justify-content: end;
+         
+      }
+   }
+
+   &:hover {
+      .work-card__img {
+         opacity: 1;
+      }
+
+      .work-card__title {
+         text-decoration-color: var(--color-accent);
+      }
+
+      .work-card__link {
+         opacity: 0.8;
+      }
+
+      
+   }
+}
+

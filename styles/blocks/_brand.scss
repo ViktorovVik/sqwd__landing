@@ -62,7 +62,11 @@
       }
       
       &--left {
-         padding-left: 33px
+         padding-left: 33px;
+
+         @include mobile-s {
+            padding-left: 25px;
+         }
       }
 
       &--right {
@@ -94,6 +98,10 @@
          height: 2px;
          background: #353535;
          opacity: .5;
+
+         @include mobile-s {
+            width: 15px;
+         }
       }
    }
 
