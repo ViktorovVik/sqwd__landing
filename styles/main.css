@@ -185,6 +185,7 @@ video {
   display: block;
   max-width: 100%;
   height: auto;
+  object-fit: cover;
 }
 
 button,
@@ -477,6 +478,7 @@ svg * {
     height: 100vh;
     padding: 80px 60px 40px;
     background-color: var(--color-darker);
+    overflow-x: auto;
   }
   .header__nav.is-active {
     transform: translate(0%, 0%);
@@ -969,6 +971,7 @@ svg * {
 .work {
   padding-bottom: clamp(1.875rem, -1.114rem + 14.94vw, 10rem);
   background-color: var(--color-white);
+  padding-top: clamp(1.875rem, -1.297rem + 15.86vw, 10.5rem);
 }
 .work__inner {
   display: flex;
@@ -1000,12 +1003,13 @@ svg * {
 }
 .work__item {
   display: grid;
-  grid-template-columns: repeat(12, 1fr);
+  grid-template-columns: repeat(11, 1fr);
   gap: 20px;
 }
 @media (width <= 768.98px) {
   .work__item {
     display: flex;
+    justify-content: center;
     width: 100%;
   }
 }
@@ -1019,6 +1023,41 @@ svg * {
   color: var(--color-darker);
   justify-content: end;
   margin-top: auto;
+}
+
+@keyframes fadeOut {
+  from {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  to {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+}
+/* Анимация для появления контента */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+/* Классы для анимаций */
+.fade-out {
+  animation: fadeOut 0.5s ease forwards;
+}
+
+.fade-in {
+  animation: fadeIn 0.5s ease forwards;
+}
+
+/* Скрываем элементы после анимации исчезновения */
+.hidden {
+  display: none;
 }
 
 .categories {
@@ -1055,19 +1094,27 @@ svg * {
 .work-card__img {
   opacity: 0.3;
   transition: 0.5s ease-in-out;
+  height: 444px;
+}
+@media (width <= 768.98px) {
+  .work-card__img {
+    height: 300px;
+  }
 }
 .work-card__title {
   position: absolute;
-  right: -90px;
-  top: 59%;
+  right: -145px;
+  top: 63%;
   transition: 0.5s ease-in;
   text-decoration-line: line-through;
   text-decoration-color: transparent;
   text-decoration-thickness: 2px;
+  max-width: 400px;
+  width: 100%;
 }
 @media (width <= 1200.98px) {
   .work-card__title {
-    right: 0;
+    right: 27px;
   }
 }
 @media (width <= 480.98px) {
@@ -1081,7 +1128,7 @@ svg * {
 }
 @media (width <= 1200.98px) {
   .work-card__title--right {
-    left: -80px;
+    left: 25px;
   }
 }
 @media (width <= 480.98px) {
@@ -1133,6 +1180,106 @@ svg * {
 }
 .work-card:hover .work-card__link {
   opacity: 0.8;
+}
+
+.team {
+  padding-top: clamp(1.875rem, -0.539rem + 12.07vw, 8.438rem);
+  padding-bottom: clamp(1.875rem, -1.297rem + 15.86vw, 10.5rem);
+}
+.team__title {
+  margin-bottom: clamp(1.25rem, 0.101rem + 5.75vw, 4.375rem);
+}
+.team__list {
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  column-gap: 20px;
+}
+@media (width <= 1200.98px) {
+  .team__list {
+    display: flex;
+    flex-wrap: wrap;
+    row-gap: 20px;
+    justify-content: center;
+  }
+}
+.team__item {
+  grid-column: 4 span;
+}
+.card-team {
+  position: relative;
+  max-width: 370px;
+  width: 100%;
+  height: 400px;
+  overflow: hidden;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.card-team:before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  background-color: #d8d8d8;
+  opacity: 0;
+  -webkit-transition: opacity 0.5s ease-in-out;
+  transition: opacity 0.5s ease-in-out;
+}
+.card-team:hover:before {
+  opacity: 0.6;
+}
+.card-team__img {
+  object-fit: cover;
+  height: 100%;
+  width: 100%;
+}
+.card-team__text {
+  padding: 20px;
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  transform: translateY(calc(100% - 65px));
+  width: 100%;
+  font-weight: 300;
+  font-size: 18px;
+  letter-spacing: 0.06em;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: rgba(255, 255, 255, 0.5);
+  transition: transform 0.5s ease-in-out, background-color 0.5s ease-in-out, -webkit-transform 0.5s ease-in-out;
+}
+.card-team__name {
+  position: relative;
+  margin-bottom: 30px;
+}
+.card-team__name:before {
+  display: block;
+  content: "";
+  position: absolute;
+  bottom: -20px;
+  left: 16px;
+  width: 45px;
+  height: 2px;
+  background: var(--color-darker);
+}
+.card-team__position {
+  margin-bottom: 10px;
+}
+.card-team__desc {
+  font-family: var(--second-family);
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 2.08333;
+  letter-spacing: 0.08em;
+  opacity: 0.5;
+}
+.card-team:hover .card-team__text {
+  transform: translateY(0);
+  background-color: #fff;
 }
 
 /*# sourceMappingURL=main.css.map */

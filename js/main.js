@@ -1,3 +1,5 @@
+
+
 const swiper = new Swiper('.swiper', {
    parallax: true,
    loop: true,
@@ -25,10 +27,29 @@ const swiper = new Swiper('.swiper', {
          document.body.classList.toggle('is-lock');
          menu.classList.toggle('is-active');
          navBtn.classList.toggle('is-active');
-         paginationButtons.classList.toggle('none')
+         paginationButtons.classList.toggle('none');
+         
+      })
+
+      menu.querySelectorAll('[data-js-header-menu-link]').forEach(link => {
+         link.addEventListener('click', () => {
+            document.body.classList.remove('is-lock');
+            menu.classList.remove('is-active');
+            navBtn.classList.remove('is-active');
+            paginationButtons.classList.remove('none');
+         })
       })
 }
 
+
+
+
+
+
+//-------------------------------------------------
+
+
+ 
 
 
 

@@ -39,6 +39,7 @@
       span {
          transform: scale(0);
          transition: .3s ease-in-out;
+         
          &:first-child {
             transform: rotate(-45deg);
             bottom: 0;

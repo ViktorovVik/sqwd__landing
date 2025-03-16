@@ -15,22 +15,28 @@
    &__img {
       opacity: 0.3;
       transition: .5s ease-in-out;
+      height: 444px;
 
+      @include mobile {
+         height: 300px;
+      }
      
    }
 
    &__title {
       position: absolute;
-      right: -90px;
-      top: 59%;
+      right: -145px;;
+      top: 63%;
       transition: .5s  ease-in;
       text-decoration-line: line-through;
       text-decoration-color: transparent;
       text-decoration-thickness: 2px;
+      max-width: 400px;
+      width: 100%;
 
       
       @include tablet {
-         right: 0;
+         right: 27px;
       }
 
       @include mobile-s {
@@ -42,7 +48,7 @@
          right: 0;
 
          @include tablet {
-            left: -80px;
+            left: 25px; 
          }
 
          @include mobile-s {
