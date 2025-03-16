@@ -1,0 +1,35 @@
+@use '../helpers' as *;
+
+.team {
+   padding-top: clamp(1.875rem, -0.539rem + 12.07vw, 8.438rem);
+   padding-bottom: clamp(1.875rem, -1.297rem + 15.86vw, 10.5rem);
+   &__inner {
+      
+   }
+   
+   &__title {
+      margin-bottom: clamp(1.25rem, 0.101rem + 5.75vw, 4.375rem);
+   }
+   
+   &__list {
+      display: grid;
+      grid-template-columns: repeat(12, 1fr);
+      column-gap: 20px;
+
+      @include tablet {
+         display: flex;
+         flex-wrap: wrap;
+         row-gap: 20px;
+         justify-content: center;
+      }
+   }
+
+   &__item {
+      grid-column: 4 span;
+   }
+
+   &__card {
+
+   }
+}
+

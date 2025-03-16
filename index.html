@@ -7,10 +7,10 @@
    <link rel="stylesheet" href="./styles/swiper.css">
    <link rel="stylesheet" href="./styles/main.css">
    <script src="./js/swiper.js"></script>
+   <script src="./js/work/model.js" type="module" defer></script>
+	<script src="./js/work/view.js" type="module" defer></script>
+	<script src="./js/controller.js" type="module" defer></script>
    <script src="./js/main.js" type="module" defer></script>
-   <style>
-
-   </style>
 </head>
 <body>
    <header class="header">
@@ -18,23 +18,23 @@
          <nav class="header__nav" aria-label="navigation" data-js-header-menu>
             <ul class="header__nav-list">
                <li class="header__nav-item">
-                  <a href="" class="header__nav-link">WORKS</a>
+                  <a href="#work" class="header__nav-link" data-js-header-menu-link>WORKS</a>
                </li>
                <li class="header__nav-item">
-                  <a href="#brand" class="header__nav-link">ABOUT</a>
+                  <a href="#brand" class="header__nav-link" data-js-header-menu-link>ABOUT</a>
                </li>
                <li class="header__nav-item">
-                  <a href="#services" class="header__nav-link">SERVICES</a>
+                  <a href="#services" class="header__nav-link" data-js-header-menu-link>SERVICES</a>
                </li>
                <li class="header__nav-item">
-                  <a href="" class="header__nav-link">BLOG</a>
+                  <a href="" class="header__nav-link" data-js-header-menu-link>BLOG</a>
                </li>
                <li class="header__nav-item">
-                  <a href="" class="header__nav-link">CONTACT</a>
+                  <a href="" class="header__nav-link" data-js-header-menu-link>CONTACT</a>
                </li>
             </ul>
          </nav>     
-         <button class="burger__menu none" data-js-header-burger-button>
+         <button class="burger__menu" data-js-header-burger-button>
             <span></span>
             <span></span>
          </button>
@@ -175,11 +175,11 @@
          </div>
       </section>
       <section class="work" id="work">
+         <div class="work__title container">
+            <h2 class="h2">Latest Works</h2>
+         </div>
          <div class="work__inner container">
-             <div class="work__col-left">
-               <div class="work__title">
-                  <h2 class="h2">Latest Works</h2>
-               </div>
+             <div class="work__col-left">     
                <ul class="work__categories categories">
                   <li class="categories__item">
                      <button type="" class="categories__button active">ALL</button>
@@ -198,7 +198,7 @@
                   </li>
                </ul>
                <ul class="work__list work__list--left">
-                  <li class="work__item">
+                  <!-- <li class="work__item">
                      <article class="work-card work__article">
                         <div class="work-card__top">
                            <img src="./assets/images/work/works-1.png" alt="A KITTEN`S LIFE" class="work-card__img" width="455" height="444">
@@ -210,24 +210,11 @@
                            <a href="#!" class="work-card__link">READ MORE</a>
                         </div>
                      </article>
-                  </li>
-                  <li class="work__item">
-                     <article class="work-card work__article">
-                        <div class="work-card__top">
-                           <img src="./assets/images/work/works-2.png" alt="APPLE`S LOST MAGIC" class="work-card__img" width="455" height="444">
-                           <h3 class="work-card__title h3">APPLE`S <br> LOST MAGIC</h3>
-                        </div>
-                        <div class="work-card__text work-card__text--left">
-                           <h4 class="h4 h4--second-family">Photography</h4>
-                           <p class="work-card__desc">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-                           <a href="#!" class="work-card__link">READ MORE</a>
-                        </div>
-                     </article>
-                  </li>
+                  </li> -->
                </ul>
              </div>
              <ul class="work__list work__list--right">
-               <li class="work__item">
+               <!-- <li class="work__item">
                   <article class="work-card work__article">
                      <div class="work-card__top">
                         <img src="./assets/images/work/works-3.png" alt="100 YEARS PHOTOGRAPHY" class="work-card__img" width="455" height="444">
@@ -239,25 +226,68 @@
                         <a href="#!" class="work-card__link work-card__link--right">READ MORE</a>
                      </div>
                   </article>
-               </li>
-               <li class="work__item">
-                  <article class="work-card work__article">
-                     <div class="work-card__top">
-                        <img src="./assets/images/work/works-4.png" alt="GROOVEMADE PRODUCTS FOR MAC" class="work-card__img" width="455" height="444">
-                        <h3 class="work-card__title work-card__title--right h3">GROOVEMADE <br> PRODUCTS FOR MAC</h3>
-                     </div>
-                     <div class="work-card__text work-card__text--right">
-                        <h4 class="h4 h4--second-family ">Photography</h4>
-                        <p class="work-card__desc">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-                        <a href="#!" class="work-card__link work-card__link--right">READ MORE</a>
-                     </div>
-                  </article>
-               </li>
-               <a href="#!" class="work__link">view more</a>
+               </li> -->
              </ul>
-             
          </div>
       </section>
+      <section class="team">
+         <div class="team__inner container">
+            <div class="team__title">
+               <h2 class="h2">The Team</h2>
+            </div>
+            <ul class="team__list">
+               <li class="team__item">
+                  <figure class="team__card card-team card-team--1">
+                     <img 
+                     loading="lazy" 
+                     width="370" 
+                     height="398" 
+                     src="./assets/images/team/team-1.png" 
+                     alt="Team Tom Jones" 
+                     class="card-team__img">
+                     <div class="card-team__text">
+                        <span class="card-team__name">TOM JONES</span>
+                        <span class="card-team__position">Creative Donut`s Lover</span>
+                        <span class="card-team__desc">Create with simplicity in mind!</span>
+                     </div>
+                  </figure>
+               </li>
+               <li class="team__item">
+                  <figure class="team__card card-team card-team--1">
+                     <img 
+                     loading="lazy" 
+                     width="370" 
+                     height="398" 
+                     src="./assets/images/team/team-2.png" 
+                     alt="MICHAEL FRAUP" 
+                     class="card-team__img">
+                     <div class="card-team__text">
+                        <span class="card-team__name">MICHAEL FRAUP</span>
+                        <span class="card-team__position">Creative Director</span>
+                        <span class="card-team__desc">Create with simplicity in mind!</span>
+                     </div>
+                  </figure>
+               </li>
+               <li class="team__item">
+                  <figure class="team__card card-team card-team--1">
+                     <img 
+                     loading="lazy" 
+                     width="370" 
+                     height="398" 
+                     src="./assets/images/team/team-3.png" 
+                     alt="TIM CAHILL" 
+                     class="card-team__img">
+                     <div class="card-team__text">
+                        <span class="card-team__name">TIM CAHILL</span>
+                        <span class="card-team__position">Creative Cola's Lover</span>
+                        <span class="card-team__desc">Create with simplicity in mind!</span>
+                     </div>
+                  </figure>
+               </li>
+            </ul>
+         </div>
+      </section>
+      <section class="testimonials"></section>
    </main>
 </body>
 </html>

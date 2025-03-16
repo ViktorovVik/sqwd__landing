@@ -26,7 +26,7 @@
          height: 100vh;
          padding: 80px 60px 40px;
          background-color: var(--color-darker);
-         
+         overflow-x: auto;
 
 
          &.is-active {

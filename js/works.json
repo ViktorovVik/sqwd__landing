@@ -1,0 +1,60 @@
+{
+   "works": [
+     {
+       "id": 1,
+       "category": "Photography",
+       "image": "./assets/images/work/works-1.png",
+       "title": "A KITTEN'S LIFE",
+       "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit."
+     },
+     {
+       "id": 2,
+       "category": "Branding",
+       "image": "./assets/images/work/works-2.png",
+       "title": "APPLE'S LOST MAGIC",
+       "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit."
+     },
+     {
+       "id": 3,
+       "category": "Web Design",
+       "image": "./assets/images/work/works-3.png",
+       "title": "100 YEARS PHOTOGRAPHY",
+       "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit."
+     },
+     {
+       "id": 4,
+       "category": "Illustration",
+       "image": "./assets/images/work/works-4.png",
+       "title": "GROOVEMADE PRODUCTS FOR MAC",
+       "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit."
+     },
+     {
+       "id": 5,
+       "category": "Photography",
+       "image": "./assets/images/work/works-5.jpg",
+       "title": "A KITTEN'S DRINK",
+       "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit."
+     },
+     {
+       "id": 6,
+       "category": "Branding",
+       "image": "./assets/images/work/works-6.webp",
+       "title": "MEN`S EMOTIONS",
+       "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit."
+     },
+     {
+       "id": 7,
+       "category": "Branding",
+       "image": "./assets/images/work/works-7.png",
+       "title": "THOUGHTS",
+       "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit."
+     },
+     {
+       "id": 8,
+       "category": "Photography",
+       "image": "./assets/images/work/works-8.jpg",
+       "title": "PIESAAAK",
+       "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit."
+     }
+   ]
+ }

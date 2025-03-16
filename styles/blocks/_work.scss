@@ -3,7 +3,7 @@
 .work {
    padding-bottom: clamp(1.875rem, -1.114rem + 14.94vw, 10rem);
    background-color: var(--color-white);
-
+   padding-top: clamp(1.875rem, -1.297rem + 15.86vw, 10.5rem);
    &__inner {
       display: flex;
       justify-content: space-between;
@@ -41,11 +41,12 @@
 
    &__item {
       display: grid;
-      grid-template-columns: repeat(12, 1fr);
+      grid-template-columns: repeat(11, 1fr);
       gap: 20px;
 
       @include mobile {
          display: flex;
+         justify-content: center;
          width: 100%;
       }
    }
@@ -63,4 +64,41 @@
    margin-top: auto;
    }
 }
+
+@keyframes fadeOut {
+   from {
+     opacity: 1;
+     transform: translateY(0);
+   }
+   to {
+     opacity: 0;
+     transform: translateY(-20px);
+   }
+ }
+ 
+ /* Анимация для появления контента */
+ @keyframes fadeIn {
+   from {
+     opacity: 0;
+     transform: translateY(20px);
+   }
+   to {
+     opacity: 1;
+     transform: translateY(0);
+   }
+ }
+ 
+ /* Классы для анимаций */
+ .fade-out {
+   animation: fadeOut 0.5s ease forwards;
+ }
+ 
+ .fade-in {
+   animation: fadeIn 0.5s ease forwards;
+ }
+ 
+ /* Скрываем элементы после анимации исчезновения */
+ .hidden {
+   display: none;
+ }
 
