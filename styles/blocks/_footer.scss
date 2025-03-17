@@ -1,1 +1,37 @@
 @use '../helpers' as *;
+
+
+.footer {
+  
+   background-color: var(--color-dark);
+   font-weight: 300;
+   font-size: 14px;
+   letter-spacing: 0.06em;
+   color: var(--color-white);
+   
+   &__inner {
+      padding-top: clamp(1.25rem, -0.198rem + 7.24vw, 5.188rem);
+      padding-bottom: clamp(1.25rem, -0.198rem + 7.24vw, 5.188rem);
+      text-align: center;
+   }
+      
+   &__copyright {
+      padding: 20px 0;
+      background-color: var(--color-darker);
+   }
+   
+   &__copyright-rights {
+      display: flex;
+      justify-content: center;
+      text-align: center;
+      
+      p { 
+         opacity: .5;        
+      }
+
+      @include mobile {
+         flex-wrap: wrap;
+         align-items: center;
+      }
+   }
+}
