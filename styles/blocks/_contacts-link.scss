@@ -1,0 +1,56 @@
+@use '../helpers' as *;
+
+.contacts-link {
+
+    background-color: #fbfbfb;
+    padding-top: 69px;
+    padding-bottom: 100px;
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    transition: background-color .3s ease-in-out;
+
+    @include lg {
+      width: 100%;
+    }
+
+   &__icon {
+      width: 35px;
+      height: 35px;
+      fill: var(--color-dark);
+   }
+
+   &__name {
+      font-size: 24px;
+      letter-spacing: 0.11em;
+      color: var(--color-dark);
+      transition: color .3s ease-in-out;
+   }
+
+   &__text {
+      font-family: var(--second-family);
+      font-weight: 300;
+      font-size: 14px;
+      letter-spacing: 0.11em;
+      color: var(--color-dark);
+      opacity: 0.8;
+      transition: color .3s ease-in-out;
+   }
+
+   &:hover {
+      background-color: var(--color-accent);
+
+      .contacts-link__icon {
+         fill: var(--color-white);
+      }
+
+      .contacts-link__name,
+      .contacts-link__text {
+         color: var(--color-white);
+         
+      }
+    }
+}
+

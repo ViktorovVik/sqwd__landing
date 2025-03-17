@@ -1,0 +1,16 @@
+@use '../helpers' as *;
+
+
+.contacts {
+
+   &__inner {
+      max-width: 1800px;
+      margin: 0 auto;
+      display: flex;
+
+      @include lg {
+         flex-direction: column;
+         width: 100%;
+      }
+   }
+}
