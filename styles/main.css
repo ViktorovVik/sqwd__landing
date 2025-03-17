@@ -1359,5 +1359,63 @@ svg * {
   color: var(--color-gray-alt);
   opacity: 0.5;
 }
+.contacts__inner {
+  max-width: 1800px;
+  margin: 0 auto;
+  display: flex;
+}
+@media (width <= 992.98px) {
+  .contacts__inner {
+    flex-direction: column;
+    width: 100%;
+  }
+}
+
+.contacts-link {
+  background-color: #fbfbfb;
+  padding-top: 69px;
+  padding-bottom: 100px;
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+  transition: background-color 0.3s ease-in-out;
+}
+@media (width <= 992.98px) {
+  .contacts-link {
+    width: 100%;
+  }
+}
+.contacts-link__icon {
+  width: 35px;
+  height: 35px;
+  fill: var(--color-dark);
+}
+.contacts-link__name {
+  font-size: 24px;
+  letter-spacing: 0.11em;
+  color: var(--color-dark);
+  transition: color 0.3s ease-in-out;
+}
+.contacts-link__text {
+  font-family: var(--second-family);
+  font-weight: 300;
+  font-size: 14px;
+  letter-spacing: 0.11em;
+  color: var(--color-dark);
+  opacity: 0.8;
+  transition: color 0.3s ease-in-out;
+}
+.contacts-link:hover {
+  background-color: var(--color-accent);
+}
+.contacts-link:hover .contacts-link__icon {
+  fill: var(--color-white);
+}
+.contacts-link:hover .contacts-link__name,
+.contacts-link:hover .contacts-link__text {
+  color: var(--color-white);
+}
 
 /*# sourceMappingURL=main.css.map */
