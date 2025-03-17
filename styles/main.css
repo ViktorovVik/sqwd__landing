@@ -839,7 +839,7 @@ svg * {
 }
 
 .services {
-  scroll-margin-top: 60px;
+  padding-top: clamp(1.875rem, -0.355rem + 11.15vw, 7.938rem);
   padding-bottom: clamp(1.875rem, -0.562rem + 12.18vw, 8.5rem);
 }
 .services__title {
@@ -1280,6 +1280,84 @@ svg * {
 .card-team:hover .card-team__text {
   transform: translateY(0);
   background-color: #fff;
+}
+
+.rating {
+  display: flex;
+  column-gap: 9px;
+}
+
+.testimonials {
+  padding-top: clamp(1.875rem, -0.125rem + 10vw, 7.313rem);
+  padding-bottom: clamp(1.875rem, -0.125rem + 10vw, 7.313rem);
+  background-color: var(--color-white);
+}
+.testimonials__slider {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.testimonials__buttons {
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.testimonials__buttons:after {
+  content: "";
+  position: absolute;
+  left: 50%;
+  bottom: -11px;
+  content: "";
+  width: 50%;
+  height: 1px;
+  opacity: 0.3;
+  background: var(--color-gray-alt);
+  transform: translateX(-50%);
+}
+.testimonials__button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 35px;
+  height: 35px;
+  border-radius: 100%;
+  background-color: transparent;
+  opacity: 0.5;
+  transition: opacity 0.5s ease-in-out, background-color 0.5s ease-in-out;
+}
+.testimonials__button--rotated {
+  transform: rotate(180deg);
+}
+.testimonials__button:hover {
+  opacity: 1;
+  background-color: var(--color-bg);
+}
+
+.testimonials-card {
+  margin: 0 auto;
+  max-width: 735px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  row-gap: 25px;
+}
+.testimonials-card__text p {
+  font-weight: 300;
+  font-size: 14px;
+  line-height: 2.21429;
+  letter-spacing: 0.06em;
+  text-align: center;
+  color: var(--color-dark);
+}
+.testimonials-card__position {
+  font-weight: 300;
+  font-size: 14px;
+  letter-spacing: 0.06em;
+  color: var(--color-gray-alt);
+  opacity: 0.5;
 }
 
 /*# sourceMappingURL=main.css.map */

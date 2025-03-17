@@ -1,0 +1,47 @@
+@use '../helpers' as *;
+
+
+.testimonials-card {
+   margin: 0 auto;
+   max-width: 735px;
+   width: 100%;
+   display: flex;
+   flex-direction: column;
+   justify-content: center;
+   align-items: center;
+   row-gap: 25px;
+
+   &__text {
+
+      p {
+         font-weight: 300;
+         font-size: 14px;
+         line-height: 2.21429;
+         letter-spacing: 0.06em;
+         text-align: center;
+         color: var(--color-dark);
+      }
+   }
+
+   &__box {
+
+   }
+
+   &__name {
+
+   }
+
+   &__position {
+      font-weight: 300;
+      font-size: 14px;
+      letter-spacing: 0.06em;
+      color: var(--color-gray-alt);
+      opacity: .5;
+   }
+
+   &__rating {
+
+   }
+   
+   
+}
