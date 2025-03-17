@@ -1,0 +1,23 @@
+@use '../helpers' as *;
+
+.soc1als {
+
+   &__list {
+      display: flex;
+      column-gap: 20px;
+      justify-content: center;
+      align-items: center;
+   }
+
+   &__icon {
+      width: 35px;
+      height: 35px;
+      fill: #fff;
+      opacity: .5;
+      transition: opacity .5s ease-in-out;
+
+      &:hover {
+         opacity: 1;
+      }
+   }
+}
