@@ -1,7 +1,7 @@
 @use '../helpers' as *;
 
 .services {
-   scroll-margin-top: 60px;
+   padding-top: clamp(1.875rem, -0.355rem + 11.15vw, 7.938rem);
    padding-bottom: clamp(1.875rem, -0.562rem + 12.18vw, 8.5rem);
    &__title {
       margin-bottom: clamp(1.25rem, -0.244rem + 7.47vw, 5.313rem);

@@ -26,6 +26,4 @@ export class WorksController {
   }
 }
 
-// Инициализация приложения
-
 const controller = new WorksController();
